@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd3mlypgdx1tk"]
+
+[ext_resource type="PackedScene" uid="uid://et8s0kyc6oth" path="res://scenes/floor/floor.tscn" id="1_xpwjw"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_xpwjw")]
+position = Vector2(640, 360)
