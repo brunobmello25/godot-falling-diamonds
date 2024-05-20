@@ -15,7 +15,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		GameManager.game_over()
+		GameManager.defeat_player()
 
 
 func _on_destruction_timer_timeout():
