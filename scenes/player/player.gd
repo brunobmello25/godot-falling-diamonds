@@ -10,10 +10,10 @@ func _ready() -> void:
 
 
 func _process(delta) -> void:
-	move(delta)
+	move()
 
 
-func move(delta: float) -> void:
+func move() -> void:
 	if Input.is_action_pressed("move_right"):
 		velocity.x = speed
 		sprite.set_flip_h(false)

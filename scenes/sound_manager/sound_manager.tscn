@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://txrm3umcl6rb"]
+
+[ext_resource type="AudioStream" uid="uid://cnrwj55wwx0xv" path="res://assets/sounds/background-music.mp3" id="1_qdmx1"]
+[ext_resource type="Script" path="res://scenes/sound_manager/sound_manager.gd" id="1_t3ybk"]
+[ext_resource type="AudioStream" uid="uid://by8o353jec61u" path="res://assets/sounds/game over.wav" id="1_yoffr"]
+[ext_resource type="AudioStream" uid="uid://j8ppb4i3dgam" path="res://assets/sounds/diamond.mp3" id="2_84jqv"]
+
+[node name="SoundManager" type="Node2D"]
+script = ExtResource("1_t3ybk")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_yoffr")
+volume_db = -10.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_qdmx1")
+volume_db = -10.0
+
+[node name="Diamond" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_84jqv")
+volume_db = -10.0

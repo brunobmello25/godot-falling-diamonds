@@ -5,7 +5,7 @@ extends Area2D
 @onready var destruction_timer: Timer = $DestructionTimer
 
 
-func _read():
+func _ready():
 	destruction_timer.start()
 
 

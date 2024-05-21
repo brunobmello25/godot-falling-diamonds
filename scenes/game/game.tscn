@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bd3mlypgdx1tk"]
+[gd_scene load_steps=7 format=3 uid="uid://bd3mlypgdx1tk"]
 
 [ext_resource type="PackedScene" uid="uid://et8s0kyc6oth" path="res://scenes/floor/floor.tscn" id="1_xpwjw"]
 [ext_resource type="PackedScene" uid="uid://csf3ds3mntsig" path="res://scenes/player/player.tscn" id="2_433tp"]
 [ext_resource type="PackedScene" uid="uid://clno20edg02pd" path="res://scenes/ui/ui.tscn" id="4_i4bph"]
 [ext_resource type="PackedScene" uid="uid://cyitq5kv8jxom" path="res://scenes/object_generator/object_generator.tscn" id="5_5hcht"]
-[ext_resource type="Script" path="res://scenes/ui/ui.gd" id="5_bidbl"]
+[ext_resource type="Texture2D" uid="uid://dcb2i8hph1hb2" path="res://assets/sprites/objects/background.png" id="5_d0p1f"]
+[ext_resource type="PackedScene" uid="uid://cd0a0aovh47jw" path="res://scenes/walls/walls.tscn" id="6_ppoiw"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,9 +13,16 @@
 position = Vector2(640, 360)
 
 [node name="Player" parent="." instance=ExtResource("2_433tp")]
-position = Vector2(110, 519)
+position = Vector2(640, 519)
 
 [node name="ObjectGenerator" parent="." instance=ExtResource("5_5hcht")]
 
 [node name="UI" parent="." instance=ExtResource("4_i4bph")]
-script = ExtResource("5_bidbl")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 360)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_d0p1f")
+
+[node name="Walls" parent="." instance=ExtResource("6_ppoiw")]
